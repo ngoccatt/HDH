@@ -1,0 +1,8 @@
+https://stackoverflow.com/questions/49212498/increase-heap-size-of-a-running-process
+https://www.quora.com/How-can-we-change-the-size-of-a-heap-segment-allocated-in-a-C-program
+https://www.reddit.com/r/C_Programming/comments/93vkbb/why_use_aligned_malloc/
+
+
+https://stackoverflow.com/questions/39677063/difference-between-aligned-malloc-and-standard-malloc
+https://www.careercup.com/question?id=2777 *
+https://stackoverflow.com/questions/51936866/aligned-malloc-c-implementation
