@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include "ex1.h"
 
-void * aligned_malloc(unsigned int size, unsigned int align){
+vvoid * aligned_malloc(unsigned int size, unsigned int align){
     void *p1, *p2;
     /* We need to use malloc provided by C. First we need to allocate memory
     of size bytes + alignment + sizeof(size_t) . We need 'bytes' because
@@ -19,12 +19,12 @@ void * aligned_malloc(unsigned int size, unsigned int align){
     */
     p1 = (void*)malloc(size + align + sizeof(void*));
     if (p1 == NULL) return NULL;
-    size_t addr = (size_t)p1;
+    size_t addr = (size_t)p1 + sizeof(void*);       //make sure that we always have 8byte for saving the address of p1.
     size_t step = addr % align;
-    //if step == 0, then our p2 address will use extra align byte, not p1
+    //if step == 0, then our p2 address will use extra align byte, not addr
     //this is not wrong, since we need to save the address allocated by malloc 
     //from p1 previous to the pointer p2 which we return to user
-    p2 = (void*)(p1 + (align - step));
+    p2 = (void*)(addr + (align - step));
     //this p2 pointer is returned to user.
     //cast pointer 2 from void to size_t to easy changing its value!
     //size_t * pointer size is equal to void *, so we can cast it, and decrease
