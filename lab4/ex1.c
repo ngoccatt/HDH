@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include "ex1.h"
 
-vvoid * aligned_malloc(unsigned int size, unsigned int align){
+void * aligned_malloc(unsigned int size, unsigned int align){
     void *p1, *p2;
     /* We need to use malloc provided by C. First we need to allocate memory
     of size bytes + alignment + sizeof(size_t) . We need 'bytes' because
