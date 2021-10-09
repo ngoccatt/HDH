@@ -34,6 +34,15 @@ void addList(char* data) {
     }
 }
 
+void clearList() {
+    while(head != NULL) {
+        struct Node* temp = head;
+        head = head->next;
+        free(temp);
+    } 
+    tail = NULL;
+}
+
 int countNumberDivisibleBy2(){
 	struct Node* scan = head;
 	int count = 0;
@@ -70,12 +79,8 @@ int countNumberDivisibleBy3() {
 }
 
 int main(int argc, char** argv) {
-    if (argc < 2) {
-        printf("NO FILE IMPORTED\n");
-        return -1;
-    } 
     FILE* fptr;
-	fptr = fopen(argv[1], "r");
+	fptr = fopen("number.txt", "r");
 	char data[80];
 	if (fptr == NULL) {
 		printf("Can't open file!\n"); 
@@ -129,6 +134,7 @@ int main(int argc, char** argv) {
         printf("%d\n", countNumberDivisibleBy2());
     }
 	
+	clearList();
 	fclose(fptr);
 
 	return 0;
