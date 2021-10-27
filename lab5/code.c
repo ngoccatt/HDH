@@ -15,5 +15,9 @@ int main() {
         //will wait for that tid till done.
         pthread_join(tid[i], NULL);
     }
+    //this does not work
+    // for(int i = 0; i < 10; i++) {
+    //     pthread_join(tid[i], NULL);
+    // }
     pthread_exit(NULL);
 }
