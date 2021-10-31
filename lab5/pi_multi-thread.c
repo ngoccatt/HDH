@@ -53,7 +53,7 @@ double compute_pi(int nPoint) {
     for(int i = 0; i < NO_OF_THREAD; i++) {
         //khong quan tam toi attribute (doi so thu 2.)
         pthread_join(tid[i], NULL);
-        printf("output point from thread: %d\n", myarg[i].outputPoint);
+        //printf("output point from thread: %d\n", myarg[i].outputPoint);
         insidePoint += myarg[i].outputPoint;
     }
     printf("total of inside point: %d\n", insidePoint);

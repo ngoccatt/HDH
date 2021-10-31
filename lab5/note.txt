@@ -1,0 +1,26 @@
+https://www.sanfoundry.com/operating-system-questions-answers-process-synchronization/
+https://compsciedu.com/Operating-System/Process-Synchronization/discussion/14152
+https://mcqmate.com/discussion/113193/the-segment-of-code-in-which-the-process-may-change-common-variables-update-tables-write-into-files-is-known-as
+
+why you shouldn't use rand() when working with thread
+https://stackoverflow.com/questions/10624755/openmp-program-is-slower-than-sequential-one
+https://stackoverflow.com/questions/44100784/pthread-is-faster-than-serial-in-windows-but-slower-than-serial-in-linux?rq=1
+
+how to return value when working with thread
+https://stackoverflow.com/questions/2251452/how-to-return-a-value-from-pthread-threads-in-c (read solution 2)
+
+https://stackoverflow.com/questions/1352749/multiple-arguments-to-function-called-by-pthread-create
+https://stackoverflow.com/questions/20824229/when-to-use-pthread-exit-and-when-to-use-pthread-join-in-linux
+
+all about thread
+https://docs.oracle.com/cd/E19455-01/806-5257/6je9h032i/index.html#tlib-76426
+
+time
+https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1?noredirect=1&lq=1
+look at the comment that have plot. 
+
+• real: The actual time spent in running the process from start to finish, as if it was measured by a human with a stopwatch
+
+• user: The cumulative time spent by all the CPUs during the computation
+
+• sys: The cumulative time spent by all the CPUs during system-related tasks such as memory allocation.

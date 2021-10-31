@@ -25,7 +25,7 @@ void * countPointInside(void* arg) {
     int nPoint = arg_t->inputPoint;
     //de pthread_mutex_lock o ngoai vong for thi no
     //lai chay nhanh hon khi de ben trong (boc insidePoint++).
-    //chac han la do chi phi goi ham qua lon.
+    //chac han la do chi phi goi ham qua lon (overhead)
     pthread_mutex_lock(&lock);
     for(int i = 0; i < nPoint; i++) {
         double x = (double)rand_r(&arg_t->seed)/RAND_MAX; //create x from 0 -> 1
